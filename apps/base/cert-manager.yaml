@@ -14,8 +14,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: manifests/cert-manager
-    repoURL: https://github.com/WaffleHacks/infrastructure.git
+    path: cert-manager
+    repoURL: https://github.com/WaffleHacks/infrastructure-manifests.git
     targetRevision: HEAD
   syncPolicy:
     automated:

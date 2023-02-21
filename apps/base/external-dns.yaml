@@ -14,8 +14,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: manifests/external-dns
-    repoURL: https://github.com/WaffleHacks/infrastructure.git
+    path: external-dns
+    repoURL: https://github.com/WaffleHacks/infrastructure-manifests.git
     targetRevision: HEAD
   syncPolicy:
     automated:
