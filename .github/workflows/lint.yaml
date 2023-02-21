@@ -11,3 +11,13 @@ jobs:
 
       - run: pip install yamllint
       - run: yamllint -s -f github .
+
+      - run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
+      - name: Build Kustomize projects
+        run: |
+          readarray -t projects <<< $(find . -name kustomization.yaml -exec dirname {} \;)
+          for project in ${projects[@]}; do
+            echo ::group::$project
+            ./kustomize build $project
+            echo ::endgroup::
+          done
