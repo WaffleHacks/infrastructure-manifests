@@ -12,7 +12,7 @@ data:
     - url: "{{.metadata.annotations.publicURL}}"
       title: URL
       icon.class: globe
-      if: len(metadata?.annotations?.publicURL ?? "") != 0
+      if: len(metadata.annotations.publicURL) != 0
 
   dex.config: |
     connectors:
