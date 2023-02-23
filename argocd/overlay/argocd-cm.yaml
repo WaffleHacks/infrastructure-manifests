@@ -16,8 +16,8 @@ data:
         config:
           clientID: c1bfab9c9cbda442050c
           clientSecret: $dex.github.clientSecret
-        orgs:
-          - name: WaffleHacks
-            teams:
-              - deployments
-              - technology
+          orgs:
+            - name: WaffleHacks
+              teams:
+                - deployments
+                - technology
