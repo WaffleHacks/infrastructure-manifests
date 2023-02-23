@@ -28,3 +28,5 @@ data:
               teams:
                 - deployments
                 - technology
+        loadAllGroups: true
+        teamNameField: slug
