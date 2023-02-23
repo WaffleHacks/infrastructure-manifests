@@ -11,7 +11,7 @@ data:
   application.links: |
     - url: {{.metadata.annotations.publicURL}}
       title: URL
-      icon: globe
+      icon.class: globe
       if: metadata.annotations.publicURL
 
   dex.config: |
