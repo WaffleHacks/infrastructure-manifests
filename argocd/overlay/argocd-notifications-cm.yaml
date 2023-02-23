@@ -51,4 +51,4 @@ data:
   service.github: |
     appID: 127650
     installationID: 18414310
-    privateKey: $github.privateKey
+    privateKey: $github-privateKey
