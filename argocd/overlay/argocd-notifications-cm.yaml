@@ -5,4 +5,50 @@ metadata:
   name: argocd-notifications-cm
 data:
   context: |
-    argocdUrl: https://cd.krantz.cloud
+    argocdUrl: https://deploy.wafflehacks.cloud
+
+  subscriptions: |
+    - recipients:
+        - github
+      triggers:
+        - sync-state-change
+
+  trigger.sync-state-change: |
+    - when: app.status.operationState.phase in ['Running']
+      send: [app-sync-running]
+    - when: app.status.operationState.phase in ['Succeeded']
+      send: [app-sync-succeeded]
+    - when: app.status.operationState.phase in ['Error', 'Failed']
+      send: [app-sync-failed]
+
+  template.app-sync-running: |
+    message: |
+      {{.app.spec.project}}/{{.app.metadata.name}} is deploying...
+    github:
+      status:
+        state: pending
+        label: "argocd/{{.app.metadata.name}}"
+        targetURL: "{{.context.argocdUrl}}/applications/{{.app.metadata.name}}?operation=true"
+
+  template.app-sync-succeeded: |
+    message: |
+      {{.app.spec.project}}/{{.app.metadata.name}} was successfully deployed.
+    github:
+      status:
+        state: success
+        label: "argocd/{{.app.metadata.name}}"
+        targetURL: "{{.context.argocdUrl}}/applications/{{.app.metadata.name}}?operation=true"
+
+  template.app-sync-failed: |
+    message: |
+      {{.app.spec.project}}/{{.app.metadata.name}} failed to deploy.
+    github:
+      status:
+        state: error
+        label: "argocd/{{.app.metadata.name}}"
+        targetURL: "{{.context.argocdUrl}}/applications/{{.app.metadata.name}}?operation=true"
+
+  service.github: |
+    appID: 127650
+    installationID: 18414310
+    privateKey: $github.privateKey
