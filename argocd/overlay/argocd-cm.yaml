@@ -8,13 +8,6 @@ data:
   statusbadge.enabled: "true"
   url: https://deploy.wafflehacks.cloud
 
-  server.log.level: debug
-
-  policy.default: role:readonly
-  policy.csv: |
-    g, WaffleHacks:technology, role:readonly
-    g, WaffleHacks:deployments, role:admin
-
   dex.config: |
     connectors:
       - type: github

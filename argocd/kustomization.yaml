@@ -17,6 +17,7 @@ components:
 patchesStrategicMerge:
   - overlay/argocd-cm.yaml
   - overlay/argocd-notifications-cm.yaml
+  - overlay/argocd-rbac-cm.yaml
   - overlay/argocd-server-service.yaml
 
 patchesJson6902:
