@@ -15,11 +15,11 @@ data:
 
   trigger.sync-state-change: |
     - when: app.status.operationState.phase in ['Running']
-      send: [githb-commit-status, app-sync-running]
+      send: [github-commit-status, app-sync-running]
     - when: app.status.operationState.phase in ['Succeeded']
-      send: [githb-commit-status, app-sync-succeeded]
+      send: [github-commit-status, app-sync-succeeded]
     - when: app.status.operationState.phase in ['Error', 'Failed']
-      send: [githb-commit-status, app-sync-failed]
+      send: [github-commit-status, app-sync-failed]
 
   template.github-commit-status: |
     message: |
