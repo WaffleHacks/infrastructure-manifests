@@ -29,3 +29,8 @@ patchesJson6902:
       kind: Deployment
       name: argocd-server
       version: v1
+
+images:
+  - name: quay.io/argoproj/argocd
+    newName: quay.io/argoproj/argocd
+    newTag: v2.6.2
