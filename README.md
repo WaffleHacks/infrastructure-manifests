@@ -1,3 +1,5 @@
+[![Status](https://deploy.wafflehacks.cloud/api/badge?name=apps&revision=true)](https://deploy.wafflehacks.cloud/applications/apps)
+
 # Infrastructure Manifests
 
 The applications to deploy onto the WaffleHacks K3S cluster as defined in [infrastructure/cluster][].
