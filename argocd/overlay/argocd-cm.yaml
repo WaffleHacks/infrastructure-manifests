@@ -8,6 +8,8 @@ data:
   statusbadge.enabled: "true"
   url: https://deploy.wafflehacks.cloud
 
+  policy.default: role:readonly
+
   dex.config: |
     connectors:
       - type: github
