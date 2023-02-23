@@ -8,6 +8,12 @@ data:
   statusbadge.enabled: "true"
   url: https://deploy.wafflehacks.cloud
 
+  applications.links: |
+    - url: {{.metadata.annotations.publicURL}}
+      title: URL
+      icon: globe
+      if: metadata.annotations.publicURL
+
   dex.config: |
     connectors:
       - type: github

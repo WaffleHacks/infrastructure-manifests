@@ -4,6 +4,8 @@ kind: Application
 metadata:
   name: argocd
   namespace: argocd
+  annotations:
+    publicURL: https://deploy.wafflehacks.cloud
   labels:
     app.kubernetes.io/part-of: infrastructure
   finalizers:
