@@ -3,12 +3,14 @@
 The applications to deploy onto the WaffleHacks K3S cluster as defined in [infrastructure/cluster][].
 
 Currently, this deploys:
-- [ArgoCD][]
-- [cert-manager][]
-- [Contour][]
-- [external-dns][]
+- [ArgoCD][] [![Status](https://deploy.wafflehacks.cloud/api/badge?name=argocd&revision=true)](https://deploy.wafflehacks.cloud/applications/argocd)
+- [cert-manager][] [![Status](https://deploy.wafflehacks.cloud/api/badge?name=cert-manager&revision=true)](https://deploy.wafflehacks.cloud/applications/cert-manager)
+- [Contour][] [![Status](https://deploy.wafflehacks.cloud/api/badge?name=contour&revision=true)](https://deploy.wafflehacks.cloud/applications/contour)
+- [external-dns][] [![Status](https://deploy.wafflehacks.cloud/api/badge?name=external-dns&revision=true)](https://deploy.wafflehacks.cloud/applications/external-dns)
 - [External Secrets Operator][]
-- [governor][] pod reaper
+  - Operator [![Status](https://deploy.wafflehacks.cloud/api/badge?name=external-secrets&revision=true)](https://deploy.wafflehacks.cloud/applications/external-secrets)
+  - Secret Store [![Status](https://deploy.wafflehacks.cloud/api/badge?name=secret-store&revision=true)](https://deploy.wafflehacks.cloud/applications/secret-store)
+- [governor][] pod reaper [![Status](https://deploy.wafflehacks.cloud/api/badge?name=governor&revision=true)](https://deploy.wafflehacks.cloud/applications/governor)
 
 Everything is automatically deployed with [ArgoCD][] using the [app of apps][] pattern.
 
