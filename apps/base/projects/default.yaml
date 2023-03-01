@@ -14,3 +14,4 @@ spec:
       server: '*'
   sourceRepos:
     - 'https://github.com/WaffleHacks/infrastructure-manifests.git'
+    - 'https://charts.external-secrets.io'
