@@ -1,0 +1,27 @@
+global:
+  cluster: wafflehacks
+  
+  customSecretName: newrelic-secret
+
+  lowDataMode: true
+
+logging:
+  enabled: true
+
+kube-state-metrics:
+  enabled: true
+  image:
+    tag: v2.7.0
+
+kubeEvents:
+  enabled: true
+
+newrelic-infrastructure:
+  privileged: true
+
+newrelic-prometheus-agent:
+  enabled: true
+  config:
+    kubernetes:
+      integrations_filter:
+        enabled: false
