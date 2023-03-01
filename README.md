@@ -13,6 +13,7 @@ Currently, this deploys:
   - Operator [![Status](https://deploy.wafflehacks.cloud/api/badge?name=external-secrets&revision=true)](https://deploy.wafflehacks.cloud/applications/external-secrets)
   - Secret Store [![Status](https://deploy.wafflehacks.cloud/api/badge?name=secret-store&revision=true)](https://deploy.wafflehacks.cloud/applications/secret-store)
 - [governor][] pod reaper [![Status](https://deploy.wafflehacks.cloud/api/badge?name=governor&revision=true)](https://deploy.wafflehacks.cloud/applications/governor)
+- [Metabase][]
 
 Everything is automatically deployed with [ArgoCD][] using the [app of apps][] pattern.
 
@@ -24,4 +25,5 @@ Everything is automatically deployed with [ArgoCD][] using the [app of apps][] p
 [external-dns]: https://github.com/kubernetes-sigs/external-dns
 [External Secrets Operator]: https://external-secrets.io/
 [governor]: https://github.com/keikoproj/governor
+[Metabase]: https://www.metabase.com/
 [app of apps]: https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern
