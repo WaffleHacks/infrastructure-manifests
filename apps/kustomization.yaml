@@ -12,5 +12,4 @@ resources:
   - base/external-dns.yaml
   - base/external-secrets.yaml
   - base/governor.yaml
-  - base/metabase.yaml
   - base/secret-store.yaml
