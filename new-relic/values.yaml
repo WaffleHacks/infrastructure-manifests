@@ -1,6 +1,7 @@
+---
 global:
   cluster: wafflehacks
-  
+
   customSecretName: newrelic-secret
 
   lowDataMode: true
