@@ -8,7 +8,7 @@ resources:
   - base/certificate.yaml
   - base/database-password.yaml
   - base/database.yaml
-  - base/deployment.yaml
+  # - base/deployment.yaml
   - base/namespace.yaml
   - base/route.yaml
   - base/service.yaml
