@@ -14,3 +14,17 @@ helmCharts:
     version: 5.0.4
     releaseName: nri-bundle
     valuesFile: values.yaml
+
+patchesJson6902:
+  - target:
+      group: batch
+      version: v1
+      kind: Job
+      name: nri-bundle-nri-metadata-injection-admission-create
+    path: patches/nri-metadata-injection-adminssion-job.yaml
+  - target:
+      group: batch
+      version: v1
+      kind: Job
+      name: nri-bundle-nri-metadata-injection-admission-patch
+    path: patches/nri-metadata-injection-adminssion-job.yaml
