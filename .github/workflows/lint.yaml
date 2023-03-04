@@ -18,6 +18,6 @@ jobs:
           readarray -t projects <<< $(find . -name kustomization.yaml -exec dirname {} \;)
           for project in ${projects[@]}; do
             echo ::group::$project
-            ./kustomize build $project
+            ./kustomize build $project --enable-helm
             echo ::endgroup::
           done
