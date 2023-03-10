@@ -6,6 +6,7 @@ namespace: governor
 
 images:
   - name: governor
+    newName: keikoproj/governor
     newTag: 0.3.4
 
 resources:
