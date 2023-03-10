@@ -4,4 +4,10 @@ kind: Service
 metadata:
   name: argocd-server
 spec:
-  type: ClusterIP
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: argocd-server
+  ports:
+    - port: 80
+      targetPort: 80
+
