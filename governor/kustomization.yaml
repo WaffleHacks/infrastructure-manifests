@@ -6,8 +6,7 @@ namespace: governor
 
 images:
   - name: governor
-    newName: keikoproj/governor
-    newTag: v0.3.4
+    newTag: 0.3.4
 
 resources:
   - https://raw.githubusercontent.com/keikoproj/governor/master/examples/pod-reaper.yaml
