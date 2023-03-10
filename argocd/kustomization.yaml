@@ -5,11 +5,11 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-  #- base/argocd-notifications-secret.yaml
-  #- base/argocd-secret.yaml
-  #- base/certificate.yaml
+  # - base/argocd-notifications-secret.yaml
+  # - base/argocd-secret.yaml
+  # - base/certificate.yaml
   - base/rollouts-extension.yaml
-  #- base/route.yaml
+  # - base/route.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 components:
